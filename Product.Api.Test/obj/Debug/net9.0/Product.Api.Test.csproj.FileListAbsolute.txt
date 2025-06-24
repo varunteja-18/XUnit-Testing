@@ -108,3 +108,4 @@ C:\Users\labadmin\varun\XUnit_Testing\Product.Api.Test\obj\Debug\net9.0\refint\P
 C:\Users\labadmin\varun\XUnit_Testing\Product.Api.Test\obj\Debug\net9.0\Product.Api.Test.pdb
 C:\Users\labadmin\varun\XUnit_Testing\Product.Api.Test\obj\Debug\net9.0\Product.Api.Test.genruntimeconfig.cache
 C:\Users\labadmin\varun\XUnit_Testing\Product.Api.Test\obj\Debug\net9.0\ref\Product.Api.Test.dll
+C:\Users\labadmin\varun\XUnit_Testing\Product.Api.Test\obj\Debug\net9.0\Product.Api.Test.sourcelink.json

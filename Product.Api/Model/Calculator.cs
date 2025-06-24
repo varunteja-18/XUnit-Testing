@@ -15,6 +15,10 @@ namespace Product.Api.Model{
         }
         public int Div(int a, int b)
         {
+             if (b == 0)
+            {
+                throw new DivideByZeroException("Cannot divide by zero.");
+            }
             return a / b;
         }
 

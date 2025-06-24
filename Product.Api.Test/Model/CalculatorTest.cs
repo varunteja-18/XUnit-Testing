@@ -48,19 +48,20 @@ namespace Product.Api.Test
             Assert.Equal(25, mulresult);
         }
 
-        [Fact] //annotation as test method
-        public void Div_ReturnDiv()
+        [Fact]
+        public void Div_ReturnsCorrectQuotient_WhenDivisorIsNotZero()
         {
-            //Arrange - initilazation
-            int a = 5;
-            int b = 5;
+            var calc = new Calculator();
+            Assert.Equal(2, calc.Div(6, 3));
+        }
 
-            //Action - object creation
-            var result = new Calculator();
-            int sumresult = result.Div(a, b);
+        [Fact]
+        public void Div_ThrowsException_WhenDividingByZero()
+        {
+            var calc = new Calculator();
 
-            //Assert - Testing condition
-            Assert.Equal(1, sumresult);
+            // Act & Assert
+            Assert.Throws<DivideByZeroException>(() => calc.Div(5, 0));
         }
     }
 }

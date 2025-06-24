@@ -58,5 +58,24 @@ namespace Product.Api.Tests
             // Assert: Check if the temperature conversion is correct
             Assert.Equal(expectedTemperatureF, temperatureF);
         }
+        [Theory]
+        [InlineData(35, "Hot")]
+        [InlineData(5, "Cold")]
+        [InlineData(20, "Moderate")]
+        public void GetTemperatureCategory_ReturnsCorrectCategory(int tempC, string expectedCategory)
+        {
+            // Arrange
+            var weatherForecast = new WeatherForecast
+            {
+                TemperatureC = tempC
+            };
+
+            // Act
+            var category = weatherForecast.GetTemperatureCategory();
+
+            // Assert
+            Assert.Equal(expectedCategory, category);
+        }
+
     }
 }
